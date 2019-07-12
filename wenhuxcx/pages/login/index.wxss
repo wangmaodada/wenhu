@@ -1,0 +1,8 @@
+/* pages/login/index.wxss */
+.bg-white{
+
+  height:180px;
+  padding-top: 50px;
+
+
+}

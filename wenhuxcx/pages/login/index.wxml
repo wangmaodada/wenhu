@@ -1,0 +1,15 @@
+
+<!-- 顶部菜单栏 start-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">店铺信誉检查</view>
+</cu-custom>
+<!-- 顶部菜单栏 start-->
+
+<view class="bg-white flex-sub radius shadow-lg">
+  <image src="https://image.weilanwl.com/gif/loading-white.gif" mode="aspectFit" class="gif-white response" style="height:240rpx"></image>
+</view>
+
+
+
+ <button class="cu-btn block bg-blue margin-tb-sm lg" open-type="getUserInfo" bindgetuserinfo="yijianlogin">
+    <text class="cuIcon-loading2 iconfont-spin"></text>一键登录</button>

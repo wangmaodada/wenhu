@@ -1,0 +1,75 @@
+<view class="UCenter-bg">
+  <open-data type="userAvatarUrl" class="png" mode="widthFix"></open-data>
+  <view class="text-xl">
+    <open-data type="userNickName" class="png" mode="widthFix"></open-data>
+  </view>
+  <view class="margin-top-sm">
+  </view>
+  <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<!-- 顶部菜单栏 start-->
+<!-- 广告位 end-->
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-orange">{{visitTotal}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-attentionfill"></text> 积分</view>
+  </view>
+  <view class="flex flex-sub flex-direction solid-right">
+    <view class="text-xxl text-blue">{{starCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-favorfill"></text> 阅读</view>
+  </view>
+  <view class="flex flex-sub flex-direction">
+    <view class="text-xxl text-green">{{forksCount}}</view>
+    <view class="margin-top-sm">
+      <text class="cuIcon-fork"></text> 分享</view>
+  </view>
+</view>
+<!-- 顶部菜单栏 start-->
+<!-- 广告位 end-->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <view class="content" bindtap="CopyLink" data-link="问壶app">
+      <text class="cuIcon-github text-grey"></text>
+      <text class="text-grey">关注我们的最惨官方</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/about/about" hover-class="none">
+      <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">了解更多问壶知识</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/log/log" hover-class="none">
+      <text class="cuIcon-down text-green"></text>
+      <text class="text-grey">下载我们的问壶app</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content" bindtap="showQrcode">
+      <text class="cuIcon-appreciatefill text-red"></text>
+      <text class="text-grey">为我们点赞</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/test/list" hover-class="none">
+      <text class="cuIcon-writefill text-orange"></text>
+      <text class="text-grey">意见反馈</text>
+    </navigator>
+  </view>
+</view>
+<!-- 顶部菜单栏 start-->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" bindtap="endsystem">
+  <view class="cu-item arrow">
+    <view class="content"  data-link="https://github.com/weilanwl/ColorUI">
+      <text class="cuIcon-github text-grey"></text>
+      <text class="text-grey">退出系统</text>
+    </view>
+  </view>
+</view>
+<!-- 广告位 end-->
+<view class="cu-tabbar-height"></view>
+<!-- 广告位 end-->

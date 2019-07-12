@@ -1,0 +1,78 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText" bindtap='backindex'>返回</view>
+  <view slot="content">提交相关表单</view>
+</cu-custom>
+<form>
+  <view class="cu-form-group margin-top">
+    <view class="title">姓名</view>
+    <input placeholder="真实姓名"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">店铺名</view>
+    <input placeholder="实际店铺名"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">微信号</view>
+    <input placeholder="实际微信号"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <input placeholder="实际手机号"></input>
+    <view class="cu-capsule radius">
+      <view class="cu-tag bg-blue">
+        +86
+      </view>
+      <view class="cu-tag line-blue">
+        中国大陆
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">渠道</view>
+    <input placeholder="实际渠道"></input>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">价格</view>
+    <input placeholder="整数"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">评分</view>
+    <input placeholder="1-10分"></input>
+  </view>
+  <!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+  <view class="cu-form-group margin-top">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+  </view>
+
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      图片上传
+    </view>
+    <view class="action">
+      {{imgList.length}}/4
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+        <text class="cuIcon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur">保存</button>
+    <button class="cu-btn text-green line-green shadow" bindtap='submitbutton'>上传</button>
+  </view>
+
+</form>
